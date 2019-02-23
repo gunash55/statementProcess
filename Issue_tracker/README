@@ -1,3 +1,6 @@
-Issue Tracker , a simple angular.js application which will utilize .csv file to visuvalize the o/p in the screen..
+#Issue Tracker/Project, 
+A simple front end Angularjs application which will utilize .csv file to visuvalize the o/p in the screen..
 Filter is enabled against the Issue Count.
-Details of the screens are attached as screenshots.
+Relevant Validations are applied.
+Details of the application is attached as images (screenshots).
+
