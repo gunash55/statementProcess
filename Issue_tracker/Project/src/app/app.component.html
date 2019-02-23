@@ -1,0 +1,50 @@
+
+<div style="text-align: center">
+			<h1>CUSTOMER ISSUE TRACKER</h1>
+</div>
+
+<div class="bckgrund">
+<div class="table">
+	<table id="customers">
+		<tr>
+			<td class="upload-btn-wrapper" style="border:none;">
+				<button class="btn">Upload</button>
+				<input type="file" #fileUpload name="File Upload" id="txt_file" class="btn btn-primary" (change)="fileUploadListener($event)" accept=".csv" value={{selectedImageFile}} />
+			</td>
+
+			<td style="border:none;">
+					<input type="button" name="Reset" id="txtFileReset" class="button" (click)="fileReset()" value="Clear" style="float:right;"/>
+				</td>
+
+		</tr>
+	</table>
+	<table id="customers">
+		<thead>
+			<tr>
+				<th style="background-color: black;" colspan="4">Search:
+					<input type="text" [(ngModel)]="searchQuery">
+				</th>
+			</tr>
+			<tr>
+				<th>FIRST NAME</th>
+				<th>SUR NAME</th>
+				<th>ISSUE COUNT</th>
+				<th>DATE OF BIRTH</th>
+			</tr>
+		</thead>
+	
+		<tbody>
+			<ng-container *ngFor="let issueRecord of issueRecords | issueFilter : searchQuery :'issueCount';let i=index">
+				<tr>
+					<td>{{issueRecord.firstName}}</td>
+					<td>{{issueRecord.surName}}</td>
+					<td>{{issueRecord.issueCount}}</td>
+					<td>{{issueRecord.dob}}</td>
+				</tr>
+			</ng-container>
+		</tbody>
+
+	</table>
+</div>
+</div>
+	
